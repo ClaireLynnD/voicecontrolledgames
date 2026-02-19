@@ -1,0 +1,8 @@
+vosk
+vgamepad
+PyQt6
+pyaudio
+numpy
+
+# dev
+pytest
