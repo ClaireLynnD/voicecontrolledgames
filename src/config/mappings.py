@@ -40,6 +40,8 @@ class Mapping:
             errors.append(f"Invalid action type: {self.action_type}")
         if self.action_type == "tap" and self.duration_ms <= 0:
             errors.append("Duration must be positive for tap actions")
+        if self.action_type == "hold" and self.duration_ms < 0:
+            errors.append("Duration must be non-negative for hold actions")
         if self.action_type == "analog" and not (-1.0 <= self.analog_value <= 1.0):
             errors.append("Analog value must be between -1.0 and 1.0")
         return errors

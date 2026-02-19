@@ -1,31 +1,187 @@
 {
   "name": "default",
   "mappings": [
-    {"voice_command": "jump", "target_input": "a", "action_type": "tap", "duration_ms": 200, "analog_value": 0.0},
-    {"voice_command": "attack", "target_input": "x", "action_type": "tap", "duration_ms": 200, "analog_value": 0.0},
-    {"voice_command": "block", "target_input": "b", "action_type": "hold", "duration_ms": 200, "analog_value": 0.0},
-    {"voice_command": "release block", "target_input": "b", "action_type": "release", "duration_ms": 200, "analog_value": 0.0},
-    {"voice_command": "menu", "target_input": "start", "action_type": "tap", "duration_ms": 200, "analog_value": 0.0},
-    {"voice_command": "up", "target_input": "dpad_up", "action_type": "tap", "duration_ms": 200, "analog_value": 0.0},
-    {"voice_command": "down", "target_input": "dpad_down", "action_type": "tap", "duration_ms": 200, "analog_value": 0.0},
-    {"voice_command": "left", "target_input": "dpad_left", "action_type": "tap", "duration_ms": 200, "analog_value": 0.0},
-    {"voice_command": "right", "target_input": "dpad_right", "action_type": "tap", "duration_ms": 200, "analog_value": 0.0},
-    {"voice_command": "hold up", "target_input": "dpad_up", "action_type": "hold", "duration_ms": 200, "analog_value": 0.0},
-    {"voice_command": "hold down", "target_input": "dpad_down", "action_type": "hold", "duration_ms": 200, "analog_value": 0.0},
-    {"voice_command": "hold left", "target_input": "dpad_left", "action_type": "hold", "duration_ms": 200, "analog_value": 0.0},
-    {"voice_command": "hold right", "target_input": "dpad_right", "action_type": "hold", "duration_ms": 200, "analog_value": 0.0},
-    {"voice_command": "release up", "target_input": "dpad_up", "action_type": "release", "duration_ms": 200, "analog_value": 0.0},
-    {"voice_command": "release down", "target_input": "dpad_down", "action_type": "release", "duration_ms": 200, "analog_value": 0.0},
-    {"voice_command": "release left", "target_input": "dpad_left", "action_type": "release", "duration_ms": 200, "analog_value": 0.0},
-    {"voice_command": "release right", "target_input": "dpad_right", "action_type": "release", "duration_ms": 200, "analog_value": 0.0},
-    {"voice_command": "long up", "target_input": "dpad_up", "action_type": "tap", "duration_ms": 800, "analog_value": 0.0},
-    {"voice_command": "long down", "target_input": "dpad_down", "action_type": "tap", "duration_ms": 800, "analog_value": 0.0},
-    {"voice_command": "long left", "target_input": "dpad_left", "action_type": "tap", "duration_ms": 800, "analog_value": 0.0},
-    {"voice_command": "long right", "target_input": "dpad_right", "action_type": "tap", "duration_ms": 800, "analog_value": 0.0},
-    {"voice_command": "walk left", "target_input": "left_stick_x", "action_type": "analog", "duration_ms": 200, "analog_value": -0.5},
-    {"voice_command": "walk right", "target_input": "left_stick_x", "action_type": "analog", "duration_ms": 200, "analog_value": 0.5},
-    {"voice_command": "run left", "target_input": "left_stick_x", "action_type": "analog", "duration_ms": 200, "analog_value": -1.0},
-    {"voice_command": "run right", "target_input": "left_stick_x", "action_type": "analog", "duration_ms": 200, "analog_value": 1.0},
-    {"voice_command": "stop", "target_input": "left_stick_x", "action_type": "analog", "duration_ms": 200, "analog_value": 0.0}
+    {
+      "voice_command": "yes",
+      "target_input": "a",
+      "action_type": "tap",
+      "duration_ms": 200,
+      "analog_value": 0.0
+    },
+    {
+      "voice_command": "attack",
+      "target_input": "x",
+      "action_type": "tap",
+      "duration_ms": 200,
+      "analog_value": 0.0
+    },
+    {
+      "voice_command": "block",
+      "target_input": "b",
+      "action_type": "hold",
+      "duration_ms": 200,
+      "analog_value": 0.0
+    },
+    {
+      "voice_command": "release block",
+      "target_input": "b",
+      "action_type": "release",
+      "duration_ms": 200,
+      "analog_value": 0.0
+    },
+    {
+      "voice_command": "menu",
+      "target_input": "start",
+      "action_type": "tap",
+      "duration_ms": 200,
+      "analog_value": 0.0
+    },
+    {
+      "voice_command": "up",
+      "target_input": "dpad_up",
+      "action_type": "tap",
+      "duration_ms": 200,
+      "analog_value": 0.0
+    },
+    {
+      "voice_command": "down",
+      "target_input": "dpad_down",
+      "action_type": "tap",
+      "duration_ms": 200,
+      "analog_value": 0.0
+    },
+    {
+      "voice_command": "left",
+      "target_input": "dpad_left",
+      "action_type": "tap",
+      "duration_ms": 200,
+      "analog_value": 0.0
+    },
+    {
+      "voice_command": "right",
+      "target_input": "dpad_right",
+      "action_type": "tap",
+      "duration_ms": 200,
+      "analog_value": 0.0
+    },
+    {
+      "voice_command": "hold up",
+      "target_input": "dpad_up",
+      "action_type": "hold",
+      "duration_ms": 2000,
+      "analog_value": 0.0
+    },
+    {
+      "voice_command": "hold down",
+      "target_input": "dpad_down",
+      "action_type": "hold",
+      "duration_ms": 200,
+      "analog_value": 0.0
+    },
+    {
+      "voice_command": "hold left",
+      "target_input": "dpad_left",
+      "action_type": "hold",
+      "duration_ms": 200,
+      "analog_value": 0.0
+    },
+    {
+      "voice_command": "hold right",
+      "target_input": "dpad_right",
+      "action_type": "hold",
+      "duration_ms": 200,
+      "analog_value": 0.0
+    },
+    {
+      "voice_command": "release up",
+      "target_input": "dpad_up",
+      "action_type": "release",
+      "duration_ms": 200,
+      "analog_value": 0.0
+    },
+    {
+      "voice_command": "release down",
+      "target_input": "dpad_down",
+      "action_type": "release",
+      "duration_ms": 200,
+      "analog_value": 0.0
+    },
+    {
+      "voice_command": "release left",
+      "target_input": "dpad_left",
+      "action_type": "release",
+      "duration_ms": 200,
+      "analog_value": 0.0
+    },
+    {
+      "voice_command": "release right",
+      "target_input": "dpad_right",
+      "action_type": "release",
+      "duration_ms": 200,
+      "analog_value": 0.0
+    },
+    {
+      "voice_command": "long up",
+      "target_input": "dpad_up",
+      "action_type": "tap",
+      "duration_ms": 800,
+      "analog_value": 0.0
+    },
+    {
+      "voice_command": "long down",
+      "target_input": "dpad_down",
+      "action_type": "tap",
+      "duration_ms": 800,
+      "analog_value": 0.0
+    },
+    {
+      "voice_command": "long left",
+      "target_input": "dpad_left",
+      "action_type": "tap",
+      "duration_ms": 800,
+      "analog_value": 0.0
+    },
+    {
+      "voice_command": "long right",
+      "target_input": "dpad_right",
+      "action_type": "tap",
+      "duration_ms": 800,
+      "analog_value": 0.0
+    },
+    {
+      "voice_command": "walk left",
+      "target_input": "left_stick_x",
+      "action_type": "analog",
+      "duration_ms": 200,
+      "analog_value": -0.5
+    },
+    {
+      "voice_command": "walk right",
+      "target_input": "left_stick_x",
+      "action_type": "analog",
+      "duration_ms": 200,
+      "analog_value": 0.5
+    },
+    {
+      "voice_command": "run left",
+      "target_input": "left_stick_x",
+      "action_type": "analog",
+      "duration_ms": 200,
+      "analog_value": -1.0
+    },
+    {
+      "voice_command": "run right",
+      "target_input": "left_stick_x",
+      "action_type": "analog",
+      "duration_ms": 200,
+      "analog_value": 1.0
+    },
+    {
+      "voice_command": "stop",
+      "target_input": "left_stick_x",
+      "action_type": "analog",
+      "duration_ms": 200,
+      "analog_value": 0.0
+    }
   ]
 }

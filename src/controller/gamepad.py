@@ -84,8 +84,12 @@ class VoiceGamepad:
         self._tap_timers.append(timer)
         timer.start()
 
-    def hold(self, button_name: str):
-        """Press and hold a button until explicitly released."""
+    def hold(self, button_name: str, duration_ms: int = 0):
+        """Press and hold a button.
+
+        If *duration_ms* is > 0, the button is automatically released after
+        that many milliseconds.  Otherwise it is held until explicitly released.
+        """
         button = BUTTON_MAP.get(button_name)
         if button is None:
             logger.warning(f"Unknown button: {button_name}")
@@ -95,6 +99,17 @@ class VoiceGamepad:
             self._pad.press_button(button=button)
             self._pad.update()
             self._held_buttons.add(button_name)
+
+        if duration_ms > 0:
+            def _release():
+                with self._lock:
+                    self._pad.release_button(button=button)
+                    self._pad.update()
+                    self._held_buttons.discard(button_name)
+
+            timer = threading.Timer(duration_ms / 1000.0, _release)
+            self._tap_timers.append(timer)
+            timer.start()
 
     def release(self, button_name: str):
         """Release a held button."""
@@ -140,7 +155,7 @@ class VoiceGamepad:
         if action == "tap":
             self.tap(target, duration_ms=mapping.duration_ms)
         elif action == "hold":
-            self.hold(target)
+            self.hold(target, duration_ms=mapping.duration_ms)
         elif action == "release":
             self.release(target)
         elif action == "analog":

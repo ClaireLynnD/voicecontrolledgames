@@ -111,6 +111,16 @@ class ProfileSelector(QWidget):
         if self._combo.currentText():
             self.profile_changed.emit(self._combo.currentText())
 
+    def set_profile(self, name: str) -> None:
+        """Select a profile by name in the combo box.
+
+        Args:
+            name: Profile name to select.
+        """
+        idx = self._combo.findText(name)
+        if idx >= 0:
+            self._combo.setCurrentIndex(idx)
+
     def current_profile(self) -> str:
         """Return the name of the currently selected profile."""
         return self._combo.currentText()

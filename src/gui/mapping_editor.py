@@ -178,7 +178,7 @@ class MappingEditor(QWidget):
         analog_item = self._table.item(row, _COL_ANALOG_VALUE)
 
         if duration_item is not None:
-            if action_type == "tap":
+            if action_type in ("tap", "hold"):
                 duration_item.setFlags(
                     duration_item.flags() | Qt.ItemFlag.ItemIsEditable | Qt.ItemFlag.ItemIsEnabled
                 )

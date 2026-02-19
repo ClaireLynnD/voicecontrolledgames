@@ -17,6 +17,7 @@ from PyQt6.QtWidgets import (
 )
 
 from src.gui.mapping_editor import MappingEditor
+from src.gui.mic_selector import MicSelector
 from src.gui.profile_manager import ProfileSelector
 
 
@@ -66,6 +67,12 @@ class MainWindow(QMainWindow):
         # Profile selector widget (combo + buttons)
         self._profile_selector = ProfileSelector()
         toolbar.addWidget(self._profile_selector)
+
+        toolbar.addSeparator()
+
+        # Microphone selector widget (combo + level bar + refresh)
+        self._mic_selector = MicSelector()
+        toolbar.addWidget(self._mic_selector)
 
         toolbar.addSeparator()
 
@@ -132,6 +139,11 @@ class MainWindow(QMainWindow):
     def profile_selector(self) -> ProfileSelector:
         """Access the :class:`ProfileSelector` widget."""
         return self._profile_selector
+
+    @property
+    def mic_selector(self) -> MicSelector:
+        """Access the :class:`MicSelector` widget."""
+        return self._mic_selector
 
     @property
     def mapping_editor(self) -> MappingEditor:
